@@ -4,10 +4,6 @@ const fs = require('fs');
  * @class Cacheable
  */
 class Cacheable {
-	fileName;
-	ttl;
-	data;
-
 	constructor({fileName, ttl}) {		
 		this.fileName = fileName;
 		this.ttl = ttl;
