@@ -99,22 +99,26 @@ class Pokemon {
 	 * exposed method to get pokemon details in beautified string format
 	 */
 	toString () {
-		let str = "";
+		let str = "Pokemon Found!!\n\n";
 		str += `Info \n`;
 		str += "=============\n";
 		str += `Id : ${this.id}\n`;
 		str += `Name : ${capitalise(this.name)}\n\n`;		
 		
 
-		if (Object.keys(this.locations).length === 0) {
+		const num_of_location = Object.keys(this.locations).length;
+		if (num_of_location === 0) {
 			str += 'Location  - \n';
+			str += "=============\n\n";
 		} else {
-			str += `Locations in ${capitalise(this.config.fixedPokemonLocation)} \n`;
+			let locationLabel = num_of_location > 1 ? "Locations" : "Location";
+			str += `${locationLabel} in ${capitalise(this.config.fixedPokemonLocation)} \n`;
 			str += "=============\n";
 			str += this.#processLocations() + "\n";
 		}
 
-		str += `Types \n`;
+		let typeLabel = this.types.length > 1 ? "Types" : "Type";
+		str += `${typeLabel} \n`;
 		str += "=============\n";
 		str += this.#processTypes() + "\n";
 		
