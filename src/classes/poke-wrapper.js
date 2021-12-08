@@ -1,7 +1,7 @@
 const { default: axios } = require("axios");
-const Config = require("../config/Config");
-const { COLORS } = require("./console-writer");
-const ConsoleWriter = require("./console-writer");
+const Config = require("../config/config");
+const { COLORS } = require("../utils/console-writer");
+const ConsoleWriter = require("../utils/console-writer");
 
 /**
  * @class PokeWrapper

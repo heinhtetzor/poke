@@ -1,15 +1,15 @@
 {
   "name": "poke",
   "version": "1.0.0",
-  "description": "",
-  "main": "./lib/poke.jsn",
+  "description": "Pokemin Digital Guide",
+  "main": "src/poke.js",
   "scripts": {
     "test": "jest"
   },
   "bin": {
-    "poke": "./lib/poke.js"
+    "poke": "./src/poke.js"
   },
-  "keywords": [],
+  "keywords": ["poke", "poke-cli", "pokemon"],
   "author": "",
   "license": "ISC",
   "dependencies": {

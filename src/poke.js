@@ -1,20 +1,42 @@
 #!/usr/bin/env node
+const { resolve } = require('path');
 const Cacheable = require('./classes/cacheable');
 const PokeWrapper = require('./classes/poke-wrapper');
 const Pokemon = require('./classes/pokemon');
-const Utils = require('./utils');
-const ConsoleWriter = require('./classes/console-writer');
-const Config = require('./config/Config');
-const { resolve } = require('path');
+const Utils = require('./utils/utils');
+const ConsoleWriter = require('./utils/console-writer');
+const Config = require('./config/config');
 
-
+/**
+ * 
+ * @description entry point for application
+ */
 async function main () {
 	const param = process.argv.slice(2)[0];
 
+	if (param === undefined) {
+		let helpString = "Please provide id or name to search Pokemon.\n\n";
+		helpString += " usage: poke query [options]\n";
+		helpString += " options: \n";
+		helpString += "   -h, --help Help Text\n";
+		helpString += " examples: \n";
+		helpString += "   poke snorlax\n";
+		helpString += "   poke 123\n";
+		helpString += "   poke Dragonite\n";
+		ConsoleWriter.outWithColor(ConsoleWriter.COLORS.BgRed, helpString);
+		return;
+	}
+
 	if (param === '--help' || param === '-h') {
-		let helpString = "Hello! This is a simple pokemon api wrapper.\n\n";
-		helpString += "Usage: poke [options]\n\n";
-		ConsoleWriter.outWithColor(ConsoleWriter.COLORS.FgGreen, helpString);
+		let helpString = "Hello! Welcome to Pokemon Digital Guide.\n\n";
+		helpString += " usage: poke query [options]\n";
+		helpString += " options: \n";
+		helpString += "   -h, --help Help Text\n";
+		helpString += " examples: \n";
+		helpString += "   poke snorlax\n";
+		helpString += "   poke 123\n";
+		helpString += "   poke Dragonite\n";
+		ConsoleWriter.outWithColor(ConsoleWriter.COLORS.FgBlue, helpString);
 		return;
 	}
 	

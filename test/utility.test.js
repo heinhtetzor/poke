@@ -1,5 +1,5 @@
-const PokeWrapper = require("../lib/classes/poke-wrapper");
-const Utils = require("../lib/utils");
+const PokeWrapper = require("../src/classes/poke-wrapper");
+const Utils = require("../src/utils/utils");
 
 describe ("Utility functions", () => {
 	test ("transform encounter details api response into simple location object", async () => {

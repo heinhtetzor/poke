@@ -1,4 +1,4 @@
-const PokeWrapper = require("../lib/classes/poke-wrapper");
+const PokeWrapper = require("../src/classes/poke-wrapper");
 
 describe("PokeApiWrapper", () => {
 	test ('return pokemon from poke api', async () => {

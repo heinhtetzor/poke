@@ -1,5 +1,5 @@
-const Config = require("../config/Config");
-const Utils = require("../utils");
+const Config = require("../config/config");
+const Utils = require("../utils/utils");
 const { capitalise } = Utils;
 
 /**
