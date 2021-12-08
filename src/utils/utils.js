@@ -7,6 +7,7 @@ class Utils {
 	 * @param  {array} encounters
 	 * @param  {string} location
 	 * @returns {object} encounters
+	 * @description Returns an object containing the encounters together with methods for a given location.
 	 */
 	static getEncountersByLocation(encounters, location) {
 		const map = new Map();

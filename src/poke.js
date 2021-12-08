@@ -46,12 +46,13 @@ async function main () {
 	});
 	const config = new Config();
 
-	let pokemon;
+	let pokemon; //to dynamically set pokemon instance based on cache hit or cache miss
 	let query = param.toLowerCase();
 
-	if (cache.has(query)) {
+	if (cache.has(query)) { //cache hit
 		const cachedPokemon = cache.get(query);
 
+		//create pokemon instance based on cached data
 		pokemon = new Pokemon({
 			id: cachedPokemon.id,
 			name: cachedPokemon.name,
@@ -60,12 +61,17 @@ async function main () {
 			stats: cachedPokemon.stats,
 		});
 
-	} else {
+	} else { //cache miss
+
+		//create pokemon wrapper instance to call api
 		const pokeApiWrapper = new PokeWrapper({
 			query
 		});
+
+		//init will call required two subsequent api calls
 		await pokeApiWrapper.init();
 	
+		//construct simplified pokemon object from raw response
 		const locations = Utils.getEncountersByLocation(pokeApiWrapper.encounterResponse, config.fixedPokemonLocation);
 		const types = Utils.getTypes(pokeApiWrapper.pokemonResponse.types);
 		const stats = Utils.getStats(pokeApiWrapper.pokemonResponse.stats);
@@ -77,6 +83,8 @@ async function main () {
 			types,
 			stats
 		});
+		
+		//set cache with both id and name key for furthur query for same pokemon
 		cache.set(pokemon.id, pokemon);
 		cache.set(pokemon.name, pokemon);			
 	}

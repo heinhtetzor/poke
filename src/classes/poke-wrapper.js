@@ -5,6 +5,7 @@ const ConsoleWriter = require("../utils/console-writer");
 
 /**
  * @class PokeWrapper
+ * @description Wrapper for PokeAPI. Exposes two response objects from two api calls. Objects will be available after init() call.
  */
 
 class PokeWrapper {
