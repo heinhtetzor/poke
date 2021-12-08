@@ -13,7 +13,7 @@ Simple Pokemon Search Terminal Application.
 ✅ Test coverage for critical functions
 
 ## Prequisites
-- NodeJS version > 12 preinstalled
+- NodeJS version > 14 preinstalled
 
 ## Dependencies
 - axios
