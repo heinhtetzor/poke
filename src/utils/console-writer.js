@@ -5,7 +5,15 @@
 class ConsoleWriter {
 	constructor() {}
 
+	// color codes reference - https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color
 	static COLORS = {
+		"Reset" : "\x1b[0m",
+		"Bright" : "\x1b[1m",
+		"Dim" : "\x1b[2m",
+		"Underscore" : "\x1b[4m",
+		"Blink" : "\x1b[5m",
+		"Reverse" : "\x1b[7m",
+		"Hidden" : "\x1b[8m",
 		"FgBlack" : "\x1b[30m",
 		"FgRed" : "\x1b[31m",
 		"FgGreen" : "\x1b[32m",

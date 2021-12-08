@@ -99,7 +99,7 @@ class Pokemon {
 	 * exposed method to get pokemon details in beautified string format
 	 */
 	toString () {
-		let str = "Pokemon Found!!\n\n";
+		let str = "Pokemon Found!\n";
 		str += `Info \n`;
 		str += "=============\n";
 		str += `Id : ${this.id}\n`;

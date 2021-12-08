@@ -81,7 +81,7 @@ async function main () {
 		cache.set(pokemon.name, pokemon);			
 	}
 	
-	ConsoleWriter.outWithColor(ConsoleWriter.COLORS.FgMagenta, pokemon.toString());
+	ConsoleWriter.outWithColor(ConsoleWriter.COLORS.Bright, pokemon.toString());
 
 }
 
