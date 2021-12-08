@@ -79,14 +79,19 @@ class Pokemon {
 		for (let location in locations) {									
 			let locationString = "";
 			let methodString = "";
-
+			
 			location.replace(/-/g, " ").split(' ').slice(1).forEach(word => {
 				locationString += capitalise(word) + " ";
 			});
 
 			let methods = locations[location];
-			methods.forEach(word => {
-				methodString += capitalise(word);
+						
+			methods.forEach(method => {
+				const arr = [];
+				method.split('-').forEach((word, idx) => {
+					arr.push(capitalise(word));
+				});
+				methodString += arr.join(', ');
 			});
 
 			result += `${locationString} [Method - ${methodString}]\n`;
