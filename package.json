@@ -1,0 +1,21 @@
+{
+  "name": "poke",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/poke.jsn",
+  "scripts": {
+    "test": "jest"
+  },
+  "bin": {
+    "poke": "./lib/poke.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.3"
+  }
+}
