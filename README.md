@@ -37,6 +37,9 @@ Simple Pokemon Search Terminal Application.
 ### Search Pokemon
 - poke **pikachu** [or] poke 123****
 
+## Screenshot
+![Poke](https://i.imgur.com/0RUIhLg.png)
+
 
 
 
