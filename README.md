@@ -17,7 +17,6 @@ Simple Pokemon Search Terminal Application.
 
 ## Dependencies
 - axios
-- jest
 
 ## How to install
 - run "npm install" to install locally
@@ -29,6 +28,11 @@ Simple Pokemon Search Terminal Application.
         - node poke dragonite
         - node poke 123
         - poke snorlax (if globally installed)
+
+## How to run tests
+- dev dependencies (Jest for testing) need to be installed
+ - run "npm install --dev" to install dev dependencies
+ - run "npm run test" to run test cases
 
 
 ## Available Commands
